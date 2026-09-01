@@ -68,6 +68,30 @@
     #logo + p {
       margin-top: 10rem;
     }
+
+    main.hidden {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.9s ease-in-out;
+    }
+
+    #coming-soon {
+      position: fixed;
+      color: #aaa9a3;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      pointer-events: none;
+      font-size: clamp(2rem, 6vw, 4rem);
+      letter-spacing: 0.04em;
+      transition: opacity 0.9s ease-in-out 0.4s;
+      z-index: 1000;
+    }
+
+    #coming-soon.visible {
+      opacity: 1;
+    }
   </style>
 </head>
 <!-- Google tag (gtag.js) -->
@@ -88,6 +112,19 @@
       <p>Enkel avkastning</p>
     </div>
   </main>
+  <div id="coming-soon">Kommer snart...</div>
+
+  <script>
+    document.addEventListener('click', function() {
+      const main = document.querySelector('main');
+      const comingSoon = document.getElementById('coming-soon');
+
+      if (!main.classList.contains('hidden')) {
+        main.classList.add('hidden');
+        comingSoon.classList.add('visible');
+      }
+    });
+  </script>
 </body>
 
 </html>
