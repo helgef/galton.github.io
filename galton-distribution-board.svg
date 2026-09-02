@@ -1,32 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
-  <title id="title">Galton distribusjonsbrett</title>
-  <desc id="desc">Et stilisert distribusjonsbrett med kuler og symmetriske fordelingsbaner.</desc>
-
-  <g fill="none" stroke="#f3f1eb" stroke-linecap="round" stroke-linejoin="round">
-    <!-- Outer board and funnel -->
-    <path stroke-width="14" d="M92 76h328M132 76l16 45M380 76l-16 45M148 121h216"/>
-    <path stroke="#aaa9a3" stroke-width="10" d="M148 121 86 414M364 121l62 293M86 414h340"/>
-
-    <!-- Symmetrical peg field -->
-    <g fill="#f3f1eb" stroke="none">
-      <circle cx="256" cy="150" r="9"/>
-      <circle cx="224" cy="190" r="9"/><circle cx="288" cy="190" r="9"/>
-      <circle cx="192" cy="230" r="9"/><circle cx="256" cy="230" r="9"/><circle cx="320" cy="230" r="9"/>
-      <circle cx="160" cy="270" r="9"/><circle cx="224" cy="270" r="9"/><circle cx="288" cy="270" r="9"/><circle cx="352" cy="270" r="9"/>
-      <circle cx="128" cy="310" r="9"/><circle cx="192" cy="310" r="9"/><circle cx="256" cy="310" r="9"/><circle cx="320" cy="310" r="9"/><circle cx="384" cy="310" r="9"/>
-    </g>
-
-    <!-- Distribution paths -->
-    <g stroke="#aaa9a3" stroke-width="7">
-      <path d="M256 126v24M256 159l-32 31M256 159l32 31M224 199l-32 31M224 199l32 31M288 199l-32 31M288 199l32 31"/>
-      <path d="M192 239l-32 31M192 239l32 31M256 239l-32 31M256 239l32 31M320 239l-32 31M320 239l32 31"/>
-      <path d="M160 279l-32 31M160 279l32 31M224 279l-32 31M224 279l32 31M288 279l-32 31M288 279l32 31M352 279l-32 31M352 279l32 31"/>
-    </g>
-
-    <!-- Collector bins -->
-    <g stroke-width="10">
-      <path d="M118 414v22M160 414v22M202 414v22M244 414v22M286 414v22M328 414v22M370 414v22M412 414v22"/>
-      <path d="M118 436h294"/>
-    </g>
+  <title id="title">Galton Kapital</title>
+  <desc id="desc">Et stilisert Galton-brett der prikkenes størrelse følger normalfordelingen.</desc>
+  <g fill="#aaa9a3">
+    <circle cx="256" cy="94" r="10"/>
+    <circle cx="216" cy="170" r="12"/><circle cx="296" cy="170" r="12"/>
+    <circle cx="176" cy="246" r="12"/><circle cx="256" cy="246" r="17"/><circle cx="336" cy="246" r="12"/>
+    <circle cx="136" cy="322" r="13"/><circle cx="216" cy="322" r="20"/><circle cx="296" cy="322" r="20"/><circle cx="376" cy="322" r="13"/>
+  </g>
+  <g fill="#f3f1eb">
+    <circle cx="96" cy="398" r="14"/><circle cx="176" cy="398" r="22"/><circle cx="256" cy="398" r="29"/><circle cx="336" cy="398" r="22"/><circle cx="416" cy="398" r="14"/>
   </g>
 </svg>

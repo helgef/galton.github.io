@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Galton distribusjonsbrett</title>
+  <desc id="desc">Et stilisert Galton-brett: kuler faller gjennom et felt av pinner og danner en klokkeformet normalfordeling i oppsamlingsrommene.</desc>
+  <g fill="none" stroke="#f3f1eb" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M140 66H372"/>
+    <path d="M140 66L241 108M372 66L271 108"/>
+  </g>
+  <g fill="none" stroke="#aaa9a3" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M241 108L130 430M271 108L382 430"/>
+  </g>
+  <circle cx="256" cy="146" r="9" fill="#f3f1eb"/>
+  <g fill="none" stroke="#aaa9a3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4">
+    <path d="M 256.0 146.0 L 256.0 180.0 L 277.0 222.0 L 298.0 264.0 L 319.0 306.0 L 340.0 348.0 L 361.0 396.0 L 361.0 436.4"/>
+    <path d="M 256.0 146.0 L 256.0 180.0 L 235.0 222.0 L 256.0 264.0 L 235.0 306.0 L 256.0 348.0 L 235.0 396.0 L 235.0 350.0"/>
+    <path d="M 256.0 146.0 L 256.0 180.0 L 235.0 222.0 L 214.0 264.0 L 193.0 306.0 L 172.0 348.0 L 151.0 396.0 L 151.0 436.4"/>
+  </g>
+  <g fill="#f3f1eb" stroke="none">
+    <circle cx="256.0" cy="180.0" r="9"/>
+    <circle cx="235.0" cy="222.0" r="9"/>
+    <circle cx="277.0" cy="222.0" r="9"/>
+    <circle cx="214.0" cy="264.0" r="9"/>
+    <circle cx="256.0" cy="264.0" r="9"/>
+    <circle cx="298.0" cy="264.0" r="9"/>
+    <circle cx="193.0" cy="306.0" r="9"/>
+    <circle cx="235.0" cy="306.0" r="9"/>
+    <circle cx="277.0" cy="306.0" r="9"/>
+    <circle cx="319.0" cy="306.0" r="9"/>
+    <circle cx="172.0" cy="348.0" r="9"/>
+    <circle cx="214.0" cy="348.0" r="9"/>
+    <circle cx="256.0" cy="348.0" r="9"/>
+    <circle cx="298.0" cy="348.0" r="9"/>
+    <circle cx="340.0" cy="348.0" r="9"/>
+  </g>
+  <g stroke="#aaa9a3" stroke-width="8" stroke-linecap="round">
+    <path d="M130.0 430V460"/>
+    <path d="M172.0 430V460"/>
+    <path d="M214.0 430V460"/>
+    <path d="M256.0 430V460"/>
+    <path d="M298.0 430V460"/>
+    <path d="M340.0 430V460"/>
+    <path d="M382.0 430V460"/>
+    <path d="M130.0 460H382.0"/>
+  </g>
+  <g fill="#aaa9a3">
+    <rect x="136.0" y="450.4" width="30" height="9.6" rx="6"/>
+    <rect x="178.0" y="412.0" width="30" height="48.0" rx="6"/>
+    <rect x="220.0" y="364.0" width="30" height="96.0" rx="6"/>
+    <rect x="262.0" y="364.0" width="30" height="96.0" rx="6"/>
+    <rect x="304.0" y="412.0" width="30" height="48.0" rx="6"/>
+    <rect x="346.0" y="450.4" width="30" height="9.6" rx="6"/>
+  </g>
+  <path d="M 151.0 440.4 C 158.0 434.0 179.0 416.4 193.0 402.0 C 207.0 387.6 221.0 362.0 235.0 354.0 C 249.0 346.0 263.0 346.0 277.0 354.0 C 291.0 362.0 305.0 387.6 319.0 402.0 C 333.0 416.4 354.0 434.0 361.0 440.4" fill="none" stroke="#f3f1eb" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#f3f1eb" stroke="none">
+    <circle cx="151.0" cy="448.4" r="7"/>
+    <circle cx="193.0" cy="410.0" r="7"/>
+    <circle cx="235.0" cy="362.0" r="7"/>
+    <circle cx="277.0" cy="362.0" r="7"/>
+    <circle cx="319.0" cy="410.0" r="7"/>
+    <circle cx="361.0" cy="448.4" r="7"/>
+  </g>
+</svg>
