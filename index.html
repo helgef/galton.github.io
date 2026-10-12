@@ -84,9 +84,20 @@
       <p>Enkel avkastning</p>
     </div>
   </main>
+  <section id="newsletter">
+    <form id="newsletter-form">
+      <label for="newsletter-email">Vil du bli blant de første til å vite mer om Galton? Meld deg på nyhetsbrev her:</label>
+      <div class="newsletter-row">
+        <input id="newsletter-email" name="email" type="email" placeholder="din@epost.no" autocomplete="email" required>
+        <button type="submit">Meld på</button>
+      </div>
+      <p id="newsletter-status" role="status" aria-live="polite"></p>
+    </form>
+  </section>
   <div id="coming-soon">Kommer snart...</div>
 
   <script src="/main.js"></script>
+  <script type="module" src="/newsletter.js"></script>
 </body>
 
 </html>

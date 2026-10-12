@@ -16,6 +16,7 @@ body {
   margin: 0;
   display: grid;
   place-items: center;
+  align-content: center;
   background: #101110;
 }
 
@@ -81,4 +82,63 @@ main.hidden {
 
 #coming-soon.visible {
   opacity: 1;
+}
+
+#newsletter {
+  width: min(100%, 32rem);
+  padding: 0 1rem 2rem;
+  text-align: center;
+}
+
+#newsletter label {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: #aaa9a3;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+.newsletter-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#newsletter input,
+#newsletter button {
+  font: inherit;
+  font-size: 0.95rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 6px;
+  border: 1px solid #3a3b38;
+}
+
+#newsletter input {
+  flex: 1;
+  min-width: 0;
+  background: #1a1b19;
+  color: #f3f1eb;
+}
+
+#newsletter input:focus {
+  outline: none;
+  border-color: #aaa9a3;
+}
+
+#newsletter button {
+  background: #aaa9a3;
+  color: #101110;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#newsletter button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+#newsletter-status {
+  min-height: 1.5em;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
 }

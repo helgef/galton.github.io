@@ -1,4 +1,6 @@
-document.addEventListener('click', function() {
+document.addEventListener('click', function(event) {
+  if (event.target.closest('#newsletter')) return;
+
   const main = document.querySelector('main');
   const comingSoon = document.getElementById('coming-soon');
 
