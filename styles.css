@@ -85,51 +85,95 @@ main.hidden {
 }
 
 #newsletter {
-  width: min(100%, 32rem);
-  padding: 0 1rem 2rem;
+  width: min(100% - 2rem, 30rem);
+  margin: 0 auto 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid #2a2b28;
   text-align: center;
+  animation: newsletter-in 1.2s ease-out 0.6s both;
+}
+
+@keyframes newsletter-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+.newsletter-eyebrow {
+  margin: 0 0 0.75rem;
+  color: #6f6e69;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
 }
 
 #newsletter label {
   display: block;
-  margin-bottom: 0.75rem;
-  color: #aaa9a3;
-  font-size: 0.95rem;
-  letter-spacing: 0.02em;
-  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  color: #d6d4cd;
+  font-size: clamp(1rem, 1.6vw, 1.125rem);
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
 }
 
 .newsletter-row {
   display: flex;
-  gap: 0.5rem;
+  padding: 0.3rem;
+  border: 1px solid #3a3b38;
+  border-radius: 999px;
+  background: #171816;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.newsletter-row:focus-within {
+  border-color: #8a8984;
+  box-shadow: 0 0 0 4px rgba(170, 169, 163, 0.08);
 }
 
 #newsletter input,
 #newsletter button {
   font: inherit;
   font-size: 0.95rem;
-  padding: 0.6rem 0.9rem;
-  border-radius: 6px;
-  border: 1px solid #3a3b38;
+  border: 0;
+  border-radius: 999px;
 }
 
 #newsletter input {
   flex: 1;
   min-width: 0;
-  background: #1a1b19;
+  padding: 0.7rem 1.1rem;
+  background: transparent;
   color: #f3f1eb;
+  outline: none;
 }
 
-#newsletter input:focus {
-  outline: none;
-  border-color: #aaa9a3;
+#newsletter input::placeholder {
+  color: #6f6e69;
 }
 
 #newsletter button {
-  background: #aaa9a3;
+  padding: 0.7rem 1.4rem;
+  background: #e8e6df;
   color: #101110;
   font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
   cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+#newsletter button:hover {
+  background: #ffffff;
+}
+
+#newsletter button:active {
+  transform: scale(0.97);
+}
+
+#newsletter button:focus-visible {
+  outline: 2px solid #e8e6df;
+  outline-offset: 2px;
 }
 
 #newsletter button:disabled {
@@ -139,6 +183,19 @@ main.hidden {
 
 #newsletter-status {
   min-height: 1.5em;
-  margin-top: 0.75rem;
+  margin-top: 1rem;
+  color: #aaa9a3;
   font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+  .newsletter-row {
+    flex-direction: column;
+    gap: 0.4rem;
+    border-radius: 1.25rem;
+  }
+
+  #newsletter input {
+    text-align: center;
+  }
 }
