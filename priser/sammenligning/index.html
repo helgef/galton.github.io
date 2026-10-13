@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="nb">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prissammenligning | Galton Kapital</title>
+  <meta name="description" content="Hva koster en typisk fondsportefølje hos Galton og hos andre norske fondstilbydere? Tall fra Finansportalen, oppdatert hver uke.">
+  <meta name="theme-color" content="#101110">
+  <link rel="canonical" href="https://galton.no/priser/sammenligning/">
+  <link rel="icon" type="image/svg+xml" href="/galton-distribution-board.svg">
+  <link rel="apple-touch-icon" href="/galton-favicon-512.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nb_NO">
+  <meta property="og:site_name" content="Galton Kapital">
+  <meta property="og:title" content="Hva koster fondssparing hos oss og hos andre?">
+  <meta property="og:description" content="0,1 % i plattformhonorar på alle fond, sammenlignet med andre norske tilbydere.">
+  <meta property="og:url" content="https://galton.no/priser/sammenligning/">
+  <meta property="og:image" content="https://galton.no/galton-og-image.png">
+  <link rel="stylesheet" href="/sider.css?v=2">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PMC6K5V4CF"></script>
+  <script src="/analytics.js"></script>
+</head>
+
+<body>
+  <header class="topp">
+    <a class="merke" href="/"><img src="/galton-distribution-board.svg" alt=""><span>Galton Kapital</span></a>
+    <nav aria-label="Hovedmeny">
+      <a href="/kalkulator/">Kalkulator</a>
+      <a href="/priser/sammenligning/" aria-current="page">Priser</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Hva koster fondssparing hos oss og hos andre?</h1>
+    <p class="ingress">Hos Galton betaler du 0,1 % i plattformhonorar på alle fond, pluss fondets egne kostnader. Her sammenligner vi med andre norske tilbydere, med tall fra Finansportalen som oppdateres hver uke.</p>
+
+    <p class="varsel" id="utdatert" hidden></p>
+
+    <section class="kort fremhevet" id="hovedtall" hidden>
+      <p id="paastand-innledning"></p>
+      <p class="stortall" id="paastand"></p>
+      <p id="paastand-detalj"></p>
+      <p class="fotnote" id="paastand-fotnote" hidden>*Blant norske tilbydere med fond fra flere fondshus, på en typisk fondsportefølje. Kilde: Finansportalen, <span id="fotnote-dato"></span>. Se metoden nederst på siden.</p>
+      <p style="margin-top:1rem"><a class="knapp" href="/kalkulator/">Regn ut for dine fond</a></p>
+    </section>
+
+    <h2>En typisk fondsportefølje</h2>
+    <p>Kurven består av ti av fondene som flest norske tilbydere har, vektet som en typisk sparer: halvparten i indeksfond, 40 % i aktive aksjefond og 10 % i rente.</p>
+    <div class="tabell">
+      <table>
+        <thead>
+          <tr>
+            <th>Fond</th>
+            <th>Type</th>
+            <th class="tall">Vekt</th>
+            <th class="tall">Årlig pris hos Galton</th>
+          </tr>
+        </thead>
+        <tbody id="kurv"></tbody>
+      </table>
+    </div>
+
+    <h2>Kurven hos andre tilbydere</h2>
+    <p>Merkostnaden er hvor mye mer kurven koster i året enn hos Galton. Tilbydere som ikke har alle fondene, sammenlignes på de fondene de har. Vi viser tilbydere som har minst halvparten av kurven.</p>
+    <div class="tabell">
+      <table>
+        <thead>
+          <tr>
+            <th>Tilbyder</th>
+            <th class="tall">Andel av kurven</th>
+            <th class="tall">Årlig pris</th>
+            <th class="tall">Galton, samme fond</th>
+            <th class="tall">Merkostnad</th>
+            <th class="tall">Per år på 500 000 kr</th>
+          </tr>
+        </thead>
+        <tbody id="tilbydere"></tbody>
+      </table>
+    </div>
+
+    <h2>Plattformgebyr per tilbyder</h2>
+    <p>Typisk plattformgebyr (median) hos tilbydere med minst 100 fond. Galton har samme pris på alle fond.</p>
+    <div class="tabell">
+      <table>
+        <thead>
+          <tr>
+            <th>Tilbyder</th>
+            <th class="tall">Fond</th>
+            <th class="tall">Indeksfond</th>
+            <th class="tall">Aktive fond</th>
+          </tr>
+        </thead>
+        <tbody id="gebyrer"></tbody>
+      </table>
+    </div>
+    <p class="hint">Plattformgebyret alene sier ikke alt. Noen tilbydere tar ikke plattformgebyr, men beholder returprovisjonen fra fondet, og da blir den årlige prisen høyere enn gebyret tilsier. Sammenligningen av kurven over bruker årlig pris.</p>
+
+    <h2 id="metode">Slik regner vi</h2>
+    <ul>
+      <li><p>Årlig pris er fondets løpende kostnader pluss plattformgebyret, minus returprovisjonen som betales tilbake til kunden. Dette er samme metode som Finansportalen bruker.</p></li>
+      <li><p>Hos Galton er plattformhonoraret 0,1 % på alle fond, og all returprovisjon betales tilbake til kunden. Vi bruker den høyeste returprovisjonen noen tilbyder oppgir for fondet.</p></li>
+      <li><p>Fondenes løpende kostnader og transaksjonskostnader er de samme uansett hvor du kjøper fondet.</p></li>
+      <li><p>Tall over flere år forutsetter 6,5 % årlig avkastning før kostnader. Avkastning er ikke garantert.</p></li>
+      <li><p>Fondshus som selger egne fond direkte, tar ofte 0 % i plattformgebyr på disse fondene. Det kan være billigere for ett enkelt fond, men da må du ha én konto per fondshus.</p></li>
+      <li><p>Prisene hentes fra <a href="https://www.forbrukerradet.no/finansportalen/fond/">Finansportalen</a> hver uke. Sist hentet: <span id="hentet"></span>.</p></li>
+    </ul>
+
+    <p class="hint" id="datastatus"></p>
+  </main>
+
+  <footer>
+    <p>Fondssparing innebærer risiko. Verdien kan gå opp og ned, og du kan tape penger. Historisk avkastning er ingen garanti for fremtidig avkastning.</p>
+  </footer>
+
+  <script type="module" src="/js/sammenligning.js?v=2"></script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+name: Oppdater fondspriser
+
+# Henter priser fra Finansportalen hver mandag og committer data/fondspriser.json
+# hvis noe er endret. Sammenligningssiden skjuler «billigst»-påstanden hvis
+# dataene blir eldre enn 14 dager, så en jobb som feiler gir ikke feil påstander.
+
+on:
+  schedule:
+    - cron: "0 5 * * 1"
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "js/**"
+      - "tests/**"
+      - "scripts/**"
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm test
+
+  oppdater:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm run fondspriser
+      - run: npm test
+      - name: Commit oppdaterte priser
+        run: |
+          if git diff --quiet data/fondspriser.json; then
+            echo "Ingen endringer i prisene."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/fondspriser.json
+          git commit -m "Oppdater fondspriser fra Finansportalen"
+          git push
