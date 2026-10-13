@@ -1,0 +1,9 @@
+{
+  "name": "galton-public-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fondspriser": "node scripts/hent-fondspriser.js",
+    "test": "node --test"
+  }
+}

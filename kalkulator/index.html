@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="nb">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Byttekalkulator | Galton Kapital</title>
+  <meta name="description" content="Se hva du betaler for fondene dine i dag, og hva du kan spare med 0,1 % i plattformhonorar på alle fond hos Galton.">
+  <meta name="theme-color" content="#101110">
+  <link rel="canonical" href="https://galton.no/kalkulator/">
+  <link rel="icon" type="image/svg+xml" href="/galton-distribution-board.svg">
+  <link rel="apple-touch-icon" href="/galton-favicon-512.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nb_NO">
+  <meta property="og:site_name" content="Galton Kapital">
+  <meta property="og:title" content="Hva betaler du for fondene dine?">
+  <meta property="og:description" content="Velg hvor du har fondene i dag, så regner vi ut forskjellen i kroner.">
+  <meta property="og:url" content="https://galton.no/kalkulator/">
+  <meta property="og:image" content="https://galton.no/galton-og-image.png">
+  <link rel="stylesheet" href="/sider.css?v=2">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PMC6K5V4CF"></script>
+  <script src="/analytics.js"></script>
+</head>
+
+<body>
+  <header class="topp">
+    <a class="merke" href="/"><img src="/galton-distribution-board.svg" alt=""><span>Galton Kapital</span></a>
+    <nav aria-label="Hovedmeny">
+      <a href="/kalkulator/" aria-current="page">Kalkulator</a>
+      <a href="/priser/sammenligning/">Priser</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Hva betaler du for fondene dine?</h1>
+    <p class="ingress">Velg hvor du har fondene i dag, så regner vi ut forskjellen i kroner. Hos Galton betaler du 0,1 % i plattformhonorar på alle fond, pluss fondets egne kostnader.</p>
+
+    <form id="kalkulator" class="kort" novalidate>
+      <label for="tilbyder">Hvor har du fondene i dag?</label>
+      <select id="tilbyder" required>
+        <option value="">Velg tilbyder</option>
+      </select>
+
+      <fieldset id="fondfelt" disabled>
+        <legend>Hvilke fond, og hvor mye?</legend>
+        <div id="fondrader"></div>
+        <datalist id="fondliste"></datalist>
+        <button type="button" id="legg-til" class="sekundar">+ Legg til fond</button>
+        <p class="hint" id="fondhint">Velg tilbyder først. Du kan søke på fondsnavn eller ISIN.</p>
+      </fieldset>
+    </form>
+
+    <section id="resultat" class="kort fremhevet" aria-live="polite" hidden>
+      <p id="resultat-innledning"></p>
+      <p class="stortall" id="resultat-tall"></p>
+      <p id="resultat-over-tid"></p>
+      <div class="tabell">
+        <table>
+          <thead>
+            <tr>
+              <th>Fond</th>
+              <th class="tall">Beløp</th>
+              <th class="tall">Årlig pris nå</th>
+              <th class="tall">Hos Galton</th>
+              <th class="tall">Forskjell per år</th>
+            </tr>
+          </thead>
+          <tbody id="resultat-linjer"></tbody>
+        </table>
+      </div>
+      <p class="hint" id="resultat-ukjente" hidden></p>
+      <p style="margin-top:1.5rem"><a class="knapp" href="/#newsletter" id="cta">Få beskjed når vi åpner</a></p>
+      <p class="fotnote">*Eksempel med 6,5 % årlig avkastning før kostnader og like fondskostnader. Avkastning er ikke garantert. Årlig pris er fondets løpende kostnader pluss plattformgebyr, minus returprovisjon som betales tilbake til deg. <a href="/priser/sammenligning/#metode">Slik regner vi</a>.</p>
+    </section>
+
+    <p class="hint" id="datastatus"></p>
+  </main>
+
+  <footer>
+    <p>Fondssparing innebærer risiko. Verdien kan gå opp og ned, og du kan tape penger. Historisk avkastning er ingen garanti for fremtidig avkastning.</p>
+    <p>Kilde for priser: <a href="https://www.forbrukerradet.no/finansportalen/fond/">Finansportalen</a>, Forbrukerrådet.</p>
+  </footer>
+
+  <script type="module" src="/js/kalkulator.js?v=1"></script>
+</body>
+
+</html>

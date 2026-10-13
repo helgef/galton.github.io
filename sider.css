@@ -1,0 +1,298 @@
+/* Undersider (kalkulator, prissammenligning). Samme palett som forsiden. */
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  --bakgrunn: #101110;
+  --flate: #171816;
+  --kant: #2a2b28;
+  --kant-sterk: #3a3b38;
+  --tekst: #f3f1eb;
+  --tekst-myk: #d6d4cd;
+  --tekst-dempet: #aaa9a3;
+  --tekst-svak: #6f6e69;
+  --aksent: #e8e6df;
+  --bra: #9fc79a;
+  --varsel: #e0b46a;
+  background: var(--bakgrunn);
+  color: var(--tekst);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bakgrunn);
+  line-height: 1.55;
+}
+
+a {
+  color: var(--tekst);
+  text-underline-offset: 3px;
+}
+
+.topp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: min(100% - 2rem, 56rem);
+  margin: 0 auto;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--kant);
+}
+
+.topp .merke {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--tekst-dempet);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.topp .merke img {
+  width: 28px;
+  height: 28px;
+  opacity: 0.85;
+}
+
+.topp nav {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.95rem;
+}
+
+.topp nav a {
+  color: var(--tekst-dempet);
+  text-decoration: none;
+}
+
+.topp nav a[aria-current="page"],
+.topp nav a:hover {
+  color: var(--tekst);
+}
+
+main {
+  width: min(100% - 2rem, 56rem);
+  margin: 0 auto;
+  padding: 2.5rem 0 4rem;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.9rem, 5vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+h2 {
+  margin: 3rem 0 0.75rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+p {
+  margin: 0 0 1rem;
+  color: var(--tekst-myk);
+}
+
+.ingress {
+  font-size: 1.15rem;
+  color: var(--tekst-dempet);
+  max-width: 40rem;
+}
+
+.kort {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border: 1px solid var(--kant);
+  border-radius: 1rem;
+  background: var(--flate);
+}
+
+.kort.fremhevet {
+  border-color: var(--kant-sterk);
+}
+
+label,
+legend {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--tekst);
+}
+
+fieldset {
+  margin: 1.75rem 0 0;
+  padding: 0;
+  border: 0;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--kant-sterk);
+  border-radius: 0.6rem;
+  background: var(--bakgrunn);
+  color: var(--tekst);
+  font: inherit;
+}
+
+select:focus-visible,
+input:focus-visible,
+button:focus-visible,
+.knapp:focus-visible {
+  outline: 2px solid var(--aksent);
+  outline-offset: 2px;
+}
+
+.fondrad {
+  display: grid;
+  grid-template-columns: 1fr 10rem auto;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.fondrad input[inputmode="numeric"] {
+  text-align: right;
+}
+
+button,
+.knapp {
+  display: inline-block;
+  padding: 0.7rem 1.3rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--aksent);
+  color: var(--bakgrunn);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button.sekundar {
+  background: transparent;
+  border: 1px solid var(--kant-sterk);
+  color: var(--tekst-myk);
+}
+
+button.fjern {
+  padding: 0.7rem 0.9rem;
+  background: transparent;
+  border: 1px solid var(--kant);
+  color: var(--tekst-dempet);
+}
+
+.hint {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--tekst-svak);
+}
+
+.stortall {
+  margin: 0.25rem 0;
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--tekst);
+}
+
+.stortall.bra {
+  color: var(--bra);
+}
+
+.tabell {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+th,
+td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--kant);
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  color: var(--tekst-dempet);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+td.tall,
+th.tall {
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+tr.galton td {
+  color: var(--tekst);
+  font-weight: 600;
+}
+
+.varsel {
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--varsel);
+  border-radius: 0.75rem;
+  color: var(--varsel);
+}
+
+.fotnote,
+footer {
+  font-size: 0.85rem;
+  color: var(--tekst-svak);
+}
+
+footer {
+  width: min(100% - 2rem, 56rem);
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+  border-top: 1px solid var(--kant);
+}
+
+footer p {
+  color: var(--tekst-svak);
+}
+
+button.vis-alle {
+  margin-top: 0.75rem;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 560px) {
+  .fondrad {
+    grid-template-columns: 1fr auto;
+  }
+
+  .fondrad input[list] {
+    grid-column: 1 / -1;
+  }
+
+  .topp nav {
+    gap: 0.9rem;
+  }
+
+  .topp .merke span {
+    display: none;
+  }
+}
