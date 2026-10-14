@@ -19,11 +19,14 @@ form.addEventListener("submit", async (event) => {
   try {
     await sdkReady;
     DittofeedSdk.identify({
-      userId: email,
       traits: { email, newsletter: true, source: "galton.no" },
     });
+
+    const id = DittofeedSdk.getAnonymousId();
+
+
     DittofeedSdk.track({
-      userId: email,
+      userId: id,
       event: "Newsletter Signup",
       properties: { source: "galton.no" },
     });
